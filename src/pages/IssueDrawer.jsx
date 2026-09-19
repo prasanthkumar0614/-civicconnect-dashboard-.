@@ -79,12 +79,16 @@ export default function IssueDrawer({ issueId, onClose, onChanged }) {
         {error && <p className="error-text">{error}</p>}
         {!issue && !error && <p className="hint">Loading…</p>}
 
-        {issue && (
+                {issue && (
           <>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <AssetTag id={issue.asset_display} large />
               <StatusBadge status={issue.status} />
             </div>
+
+            {issue.asset_area_path && (
+              <p className="hint" style={{ marginTop: -8 }}>📍 {issue.asset_area_path}</p>
+            )}
 
             <PriorityLabel priority={issue.ai_priority} />
 
