@@ -76,10 +76,11 @@ export default function Dashboard({ onOpenIssue, refreshKey }) {
       )}
 
       {issues && issues.length > 0 && (
-        <table className="queue-table">
+                <table className="queue-table">
           <thead>
             <tr>
               <th>Asset</th>
+              <th>Location</th>
               <th>Description</th>
               <th>Priority</th>
               <th>Status</th>
@@ -90,6 +91,7 @@ export default function Dashboard({ onOpenIssue, refreshKey }) {
             {issues.map((issue) => (
               <tr key={issue.id} className="queue-row" onClick={() => onOpenIssue(issue.id)}>
                 <td><AssetTag id={issue.asset_display} /></td>
+                <td className="hint" style={{ fontSize: 12 }}>{issue.asset_area_path}</td>
                 <td className="desc-cell">{issue.description}</td>
                 <td><PriorityLabel priority={issue.ai_priority} /></td>
                 <td><StatusBadge status={issue.status} /></td>
