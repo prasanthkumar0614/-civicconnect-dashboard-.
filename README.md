@@ -13,6 +13,7 @@ The officer / department admin / mandal head dashboard for **CivicConnect**. Man
 - Interactive asset map (Leaflet + OpenStreetMap) with status-colored markers and detected fault clusters
 - In-app notification bell for new assignments and high-priority alerts
 - Role-scoped views — Department Admins see their department, Mandal Heads see their whole mandal across departments
+- Full district/mandal/village location visibility on every complaint
 
 ## Tech Stack
 
